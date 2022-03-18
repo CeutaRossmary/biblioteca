@@ -6,14 +6,16 @@ const app = express();
 app.use(express.static("static"));
 app.use(express.static("node_modules/bootstrap/dist"));
 app.use(express.static("node_modules/axios/dist"));
+const nunjucks = require("nunjucks");
+
+
+
+
 
 
 app.listen(3000, () => {
-        console.log('Ejecutando en puerto 3000')
-    })
-    // Obtengo las rutas de archivos externos
-const rutas_api = require("./routes/api.js");
-app.use("/api", rutas_api);
+    console.log("Ejecutando en puerto 3000");
+});
 
 // 1. Instalar y configurar Nunjucks
 // 2. Crear los templates

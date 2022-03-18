@@ -12,7 +12,7 @@
 <body>
     <div class="container border mt-4 p-4 bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-ligh">
-            <a class="nav-link active h3 right" aria-current="page" href="autores.html">Ir a Autores</a>
+            <a class="nav-link active h3 right" aria-current="page" href="autores">Ir a Autores</a>
         </nav>
         <h3 class="mt-4 p-4">Add an Book</h3>
         <div class="row">
@@ -39,14 +39,15 @@
                         </tr>
                     </thead>
                     <tbody class="table-danger" id="libros">
+                        {% for libro in libros %}
                         <tr>
-
-
+                            <td>{{ libro.id }}</td>
+                            <td>{{ libro.title }}</td>
+                            <td>
+                                <a href="#">Ver más</a>
+                            </td>
                         </tr>
-                        <tr>
-
-
-                        </tr>
+                        {%endfor%}
                     </tbody>
                 </table>
             </div>

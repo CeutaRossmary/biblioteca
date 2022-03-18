@@ -8,17 +8,6 @@ const {
     add_libros_autores,
 } = require("../db.js");
 
-// middleware para proteger las rutas de la API
-// function pass_only(req, res, next) {
-//   // Si no tiene un pass en sus headers, se le manda un error
-//   //  y no le permite seguir avanzando
-//   if (req.headers.pass != "12345") {
-//     res.status(403);
-//     return res.send("Usted no tiene acceso");
-//   }
-//   next();
-// }
-
 // Nuestras rutas
 router.get("/libros", async(req, res) => {
     const user = await mostrar()

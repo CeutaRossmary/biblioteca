@@ -45,7 +45,13 @@
                             </tr>
                         </thead>
                         <tbody class="table-danger" id="autores">
-
+                            {% for autores in autores %}
+                            <tr>
+                                <td>{{ autores.id }}</td>
+                                <td>{{ autores.firstname}} {{ autores.lastname}}</td>
+                                <td>{{ autores.notes}}</td>
+                            </tr>
+                            {%endfor%}
                         </tbody>
                     </table>
                 </div>
